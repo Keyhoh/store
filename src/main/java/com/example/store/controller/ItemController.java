@@ -2,9 +2,7 @@ package com.example.store.controller;
 
 import com.example.store.model.Item;
 import com.example.store.service.ItemService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,10 @@ public class ItemController {
     @GetMapping
     public List<Item> get() {
         return this.itemService.findAll();
+    }
+
+    @PostMapping
+    public int post(@RequestBody final Item item){
+        return this.itemService.create(item);
     }
 }

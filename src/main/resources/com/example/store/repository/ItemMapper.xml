@@ -3,8 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.store.repository.ItemMapper">
+    <insert id="insertItem" parameterType="com.example.store.model.Item" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO item (name, price)
+        VALUES (#{name}, #{price});
+    </insert>
     <select id="selectAllItems" resultType="com.example.store.model.Item">
         SELECT item.id as "id", item.name as "name", item.price as "price"
-        FROM item
+        FROM item;
     </select>
 </mapper>

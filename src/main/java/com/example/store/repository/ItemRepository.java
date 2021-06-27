@@ -16,4 +16,9 @@ public class ItemRepository {
     public List<Item> findAll() {
         return this.itemMapper.selectAllItems();
     }
+
+    public int create(final Item item) {
+        this.itemMapper.insertItem(item);
+        return item.id;
+    }
 }

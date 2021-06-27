@@ -7,5 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface ItemMapper {
-    public List<Item> selectAllItems();
+    List<Item> selectAllItems();
+
+    void insertItem(final Item item);
 }

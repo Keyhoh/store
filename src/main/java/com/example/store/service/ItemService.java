@@ -18,4 +18,8 @@ public class ItemService {
     public List<Item> findAll() {
         return Collections.unmodifiableList(this.itemRepository.findAll());
     }
+
+    public int create(final Item item) {
+        return this.itemRepository.create(item);
+    }
 }
