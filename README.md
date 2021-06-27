@@ -5,6 +5,7 @@
 - [Store](#store)
     - [Required](#required)
     - [Run App](#run-app)
+    - [Show Database](#show-database)
     - [Api Reference](#api-reference)
         - [Get All item](#get-all-item)
         - [Get item by Id](#get-item-by-id)
@@ -23,65 +24,80 @@ java -version
 ## Run App
 
 ```sh
-./gradlew bootrun
+./gradlew bootRun
 ```
+
+## Show Database
+
+次のページにアクセス
+
+http://localhost:8080/h2-console
+
+以下の通り入力して `Connecet`
+
+|項目|値|
+|:---|:---|
+|Driver Class|org.h2.Driver|
+|JDBC URL|jdbc:h2:mem:store_db|
+|User Name|sa|
+|Password||
 
 ## Api Reference
 
 ### Get All item
 
-| method | path  |
+| Method | Path  |
 | :----- | :---- |
-| get    | /item |
+| GET    | /item |
 
 example
 
 ```sh
-curl -x get http://localhost:8080/item
+curl -x GET http://localhost:8080/item
 ```
 
 ### Get item by Id
 
-| method | path       |
+| Method | Path       |
 | :----- | :--------- |
-| get    | /item/{id} |
+| GET    | /item/{id} |
 
 example
 
 ```sh
-curl -x get http://localhost:8080/item/1
+curl -x GET http://localhost:8080/item/1
 ```
 
 ### Post item
 
-| method | path  |
+| Method | Path  |
 | :----- | :---- |
-| post   | /item |
+| POSt   | /item |
 
 ```sh
-curl -x post http://localhost:8080/item \
+curl -x POSt http://localhost:8080/item \
  -h `content-type: application/json` \
- -d '{"name": "new item"}'
+ -d '{"name": "Display", "price": 36000}'
 ```
 
 ### Update item
 
-| method | path       |
+| Method | Path       |
 | :----- | :--------- |
-| post   | /item/{id} |
+| PUT   | /item/{id} |
 
 ```sh
-curl -x put http://localhost:8080/item/1 \
+curl -x PUT http://localhost:8080/item/1 \
  -h `content-type: application/json` \
- -d '{"name": "new name"}'
+ -d '{"price": 460000}'
 ```
 
 ### Delete item
 
-| method | path       |
+| Method | Path       |
 | :----- | :--------- |
-| delete | /item/{id} |
+| DELETE | /item/{id} |
 
 ```sh
-curl -x delete http://localhost:8080/item/1
+curl -x DELETE http://localhost:8080/item/1
 ```
