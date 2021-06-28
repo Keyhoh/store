@@ -53,7 +53,7 @@ http://localhost:8080/h2-console
 | GET    | /item |
 
 ```sh
-curl -X GET http://localhost:8080/item
+curl -XGET http://localhost:8080/item
 ```
 
 ### Get item by id
@@ -65,7 +65,7 @@ curl -X GET http://localhost:8080/item
 | GET    | /item/{id} |
 
 ```sh
-curl -X GET http://localhost:8080/item/1
+curl -XGET http://localhost:8080/item/1
 ```
 
 ### Post item
@@ -77,9 +77,7 @@ itemを登録します
 | POST   | /item |
 
 ```sh
-curl -X POST http://localhost:8080/item \
- -H 'content-type: application/json' \
- -d '{"name": "Display", "price": 36000}'
+curl -XPOST http://localhost:8080/item -H "content-type: application/json" -d "{\"name\": \"Display\", \"price\": 36000}"
 ```
 
 ### Update item
@@ -91,9 +89,7 @@ idで指定されたitemを更新します
 | PUT   | /item/{id} |
 
 ```sh
-curl -X PUT http://localhost:8080/item/1 \
- -H 'content-type: application/json' \
- -d '{"price": 460000}'
+curl -XPUT http://localhost:8080/item/1 -H "content-type: application/json" -d "{\"price\": 460000}"
 ```
 
 ### Delete item by id
@@ -105,5 +101,5 @@ idで指定されたitemを削除します
 | DELETE | /item/{id} |
 
 ```sh
-curl -X DELETE http://localhost:8080/item/1
+curl -XDELETE http://localhost:8080/item/1
 ```
