@@ -1,5 +1,5 @@
 package com.example.store.model;
 
-public class Order {
+public class Customer {
     public int id;
 }

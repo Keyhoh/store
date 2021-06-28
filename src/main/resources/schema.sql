@@ -5,7 +5,7 @@ create table `item`
     price int          not null
 );
 
-create table `order`
+create table `customer`
 (
     id int auto_increment primary key
 );
