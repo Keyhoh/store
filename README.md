@@ -33,7 +33,7 @@ java -version
 
 http://localhost:8080/h2-console
 
-以下の通り入力して `Connecet`
+以下の通り入力して `Connect`
 
 |項目|値|
 |:---|:---|
