@@ -53,7 +53,7 @@ http://localhost:8080/h2-console
 example
 
 ```sh
-curl -x GET http://localhost:8080/item
+curl -X GET http://localhost:8080/item
 ```
 
 ### Get item by Id
@@ -65,7 +65,7 @@ curl -x GET http://localhost:8080/item
 example
 
 ```sh
-curl -x GET http://localhost:8080/item/1
+curl -X GET http://localhost:8080/item/1
 ```
 
 ### Post item
@@ -75,7 +75,7 @@ curl -x GET http://localhost:8080/item/1
 | POSt   | /item |
 
 ```sh
-curl -x POSt http://localhost:8080/item \
+curl -X POSt http://localhost:8080/item \
  -h `content-type: application/json` \
  -d '{"name": "Display", "price": 36000}'
 ```
@@ -87,7 +87,7 @@ curl -x POSt http://localhost:8080/item \
 | PUT   | /item/{id} |
 
 ```sh
-curl -x PUT http://localhost:8080/item/1 \
+curl -X PUT http://localhost:8080/item/1 \
  -h `content-type: application/json` \
  -d '{"price": 460000}'
 ```
@@ -99,5 +99,5 @@ curl -x PUT http://localhost:8080/item/1 \
 | DELETE | /item/{id} |
 
 ```sh
-curl -x DELETE http://localhost:8080/item/1
+curl -X DELETE http://localhost:8080/item/1
 ```
