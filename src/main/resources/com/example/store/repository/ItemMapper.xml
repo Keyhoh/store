@@ -8,7 +8,7 @@
         VALUES (#{name}, #{price});
     </insert>
     <select id="selectAllItems" resultType="com.example.store.model.Item">
-        SELECT item.id as "id", item.name as "name", item.price as "price"
-        FROM item;
+        SELECT i.id as "id", i.name as "name", i.price as "price"
+        FROM `item` i;
     </select>
 </mapper>
