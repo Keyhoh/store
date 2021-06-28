@@ -52,8 +52,6 @@ http://localhost:8080/h2-console
 | :----- | :---- |
 | GET    | /item |
 
-example
-
 ```sh
 curl -X GET http://localhost:8080/item
 ```
@@ -65,8 +63,6 @@ curl -X GET http://localhost:8080/item
 | Method | Path       |
 | :----- | :--------- |
 | GET    | /item/{id} |
-
-example
 
 ```sh
 curl -X GET http://localhost:8080/item/1
