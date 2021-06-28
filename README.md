@@ -76,7 +76,7 @@ curl -X GET http://localhost:8080/item/1
 
 ```sh
 curl -X POSt http://localhost:8080/item \
- -h 'content-type: application/json' \
+ -H 'content-type: application/json' \
  -d '{"name": "Display", "price": 36000}'
 ```
 
@@ -88,7 +88,7 @@ curl -X POSt http://localhost:8080/item \
 
 ```sh
 curl -X PUT http://localhost:8080/item/1 \
- -h 'content-type: application/json' \
+ -H 'content-type: application/json' \
  -d '{"price": 460000}'
 ```
 
