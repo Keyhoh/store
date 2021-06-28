@@ -21,7 +21,13 @@ public class ItemController {
     }
 
     @PostMapping
-    public int post(@RequestBody final Item item){
+    public int post(@RequestBody final Item item) {
         return this.itemService.create(item);
+    }
+
+    @PutMapping("{id}")
+    public void put(@PathVariable final int id, @RequestBody final Item item) {
+        item.id = id;
+        this.itemService.modify(item);
     }
 }

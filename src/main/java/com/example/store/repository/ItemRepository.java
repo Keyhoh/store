@@ -17,8 +17,16 @@ public class ItemRepository {
         return this.itemMapper.selectAllItems();
     }
 
+    public Item findBy(final int id) {
+        return this.itemMapper.selectItem(id);
+    }
+
     public int create(final Item item) {
         this.itemMapper.insertItem(item);
         return item.id;
+    }
+
+    public void modify(final Item item) {
+        this.itemMapper.updateItem(item);
     }
 }

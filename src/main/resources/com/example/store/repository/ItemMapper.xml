@@ -11,4 +11,14 @@
         SELECT i.id as "id", i.name as "name", i.price as "price"
         FROM `item` i;
     </select>
+    <select id="selectItem" resultType="com.example.store.model.Item">
+        SELECT i.id as "id", i.name as "name", i.price as "price"
+        FROM `item` i WHERE i.id=#{id};
+    </select>
+    <update id="updateItem">
+        UPDATE item i
+        SET i.name=#{name},
+            i.price=#{price}
+        WHERE i.id = #{id};
+    </update>
 </mapper>

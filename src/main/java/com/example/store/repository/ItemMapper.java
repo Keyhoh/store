@@ -6,8 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface ItemMapper {
+interface ItemMapper {
     List<Item> selectAllItems();
 
+    Item selectItem(final int id);
+
     void insertItem(final Item item);
+
+    void updateItem(final Item item);
 }

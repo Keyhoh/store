@@ -22,4 +22,15 @@ public class ItemService {
     public int create(final Item item) {
         return this.itemRepository.create(item);
     }
+
+    public void modify(final Item item) {
+        final Item target = this.itemRepository.findBy(item.id);
+        if (item.name != null) {
+            target.name = item.name;
+        }
+        if (item.price != null) {
+            target.price = item.price;
+        }
+        this.itemRepository.modify(target);
+    }
 }
