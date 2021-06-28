@@ -14,4 +14,6 @@ interface ItemMapper {
     void insertItem(final Item item);
 
     void updateItem(final Item item);
+
+    void deleteItem(final int id);
 }

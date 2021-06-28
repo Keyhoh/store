@@ -35,4 +35,9 @@ public class ItemController {
         item.id = id;
         this.itemService.modify(item);
     }
+
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable final int id) {
+        this.itemService.removeBy(id);
+    }
 }

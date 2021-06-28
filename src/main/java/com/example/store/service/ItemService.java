@@ -37,4 +37,8 @@ public class ItemService {
         }
         this.itemRepository.modify(target);
     }
+
+    public void removeBy(final int id) {
+        this.itemRepository.removeBy(id);
+    }
 }

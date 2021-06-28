@@ -29,4 +29,8 @@ public class ItemRepository {
     public void modify(final Item item) {
         this.itemMapper.updateItem(item);
     }
+
+    public void removeBy(final int id) {
+        this.itemMapper.deleteItem(id);
+    }
 }
