@@ -20,6 +20,11 @@ public class ItemController {
         return this.itemService.findAll();
     }
 
+    @GetMapping("{id}")
+    public Item get(@PathVariable final int id) {
+        return this.itemService.findBy(id);
+    }
+
     @PostMapping
     public int post(@RequestBody final Item item) {
         return this.itemService.create(item);

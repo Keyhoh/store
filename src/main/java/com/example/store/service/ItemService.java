@@ -19,6 +19,10 @@ public class ItemService {
         return Collections.unmodifiableList(this.itemRepository.findAll());
     }
 
+    public Item findBy(final int id) {
+        return this.itemRepository.findBy(id);
+    }
+
     public int create(final Item item) {
         return this.itemRepository.create(item);
     }
