@@ -46,6 +46,8 @@ http://localhost:8080/h2-console
 
 ### Get All item
 
+全itemを取得します
+
 | Method | Path  |
 | :----- | :---- |
 | GET    | /item |
@@ -56,7 +58,9 @@ example
 curl -X GET http://localhost:8080/item
 ```
 
-### Get item by Id
+### Get item by id
+
+指定されたidのitemを取得します
 
 | Method | Path       |
 | :----- | :--------- |
@@ -70,6 +74,8 @@ curl -X GET http://localhost:8080/item/1
 
 ### Post item
 
+itemを登録します
+
 | Method | Path  |
 | :----- | :---- |
 | POST   | /item |
@@ -82,6 +88,8 @@ curl -X POST http://localhost:8080/item \
 
 ### Update item
 
+idで指定されたitemを更新します
+
 | Method | Path       |
 | :----- | :--------- |
 | PUT   | /item/{id} |
@@ -92,7 +100,9 @@ curl -X PUT http://localhost:8080/item/1 \
  -d '{"price": 460000}'
 ```
 
-### Delete item
+### Delete item by id
+
+idで指定されたitemを削除します
 
 | Method | Path       |
 | :----- | :--------- |
