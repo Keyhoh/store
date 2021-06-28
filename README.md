@@ -72,10 +72,10 @@ curl -X GET http://localhost:8080/item/1
 
 | Method | Path  |
 | :----- | :---- |
-| POSt   | /item |
+| POST   | /item |
 
 ```sh
-curl -X POSt http://localhost:8080/item \
+curl -X POST http://localhost:8080/item \
  -H 'content-type: application/json' \
  -d '{"name": "Display", "price": 36000}'
 ```
